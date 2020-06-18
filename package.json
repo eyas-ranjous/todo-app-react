@@ -1,0 +1,64 @@
+{
+  "name": "todo-app-redux",
+  "version": "0.0.0",
+  "description": "t",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --config ./webpack.config.js --mode development --open",
+    "build": "webpack --mode development",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "",
+    "url": ""
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "dependencies": {
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0"
+  },
+  "jest": {
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "setupFiles": [
+      "./jest.setup.js"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less)$": "identity-obj-proxy"
+    }
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "@babel/preset-react": "^7.10.1",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^24.9.0",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^3.6.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "enzyme-to-json": "^3.5.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-loader": "^3.0.4",
+    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.20.0",
+    "file-loader": "^4.3.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^24.9.0",
+    "react-addons-test-utils": "^15.6.2",
+    "react-test-renderer": "^16.13.1",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0"
+  }
+}

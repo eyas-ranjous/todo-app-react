@@ -1,0 +1,30 @@
+{
+  parser: "babel-eslint",
+  "rules": {
+  "global-require": 1,
+   "no-unused-vars": 0,
+   "import/no-unresolved": [
+      "error",
+      {
+        "ignore": ['app/']
+      }
+    ],
+    max-len: [
+      "error",
+      {
+        "code": 80,
+        "ignoreComments": true
+      }
+    ],
+    "comma-dangle": [
+      "error",
+      {
+        "functions": "ignore"
+      }
+    ]
+  },
+  "env": {
+    "browser": true
+  },
+  "extends": ["airbnb-base"]
+}
