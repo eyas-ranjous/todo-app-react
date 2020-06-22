@@ -24,6 +24,7 @@
   border-radius: 5px;
   border: 1px solid #666;
   min-width: 200px;
+  outline: none;
 }
 
 .todo-app button {
@@ -33,4 +34,5 @@
   border: 1px solid #666;
   min-width: 100px;
   cursor: pointer;
+  outline: none;
 }
