@@ -8,11 +8,17 @@ A complete todo app in reactjs with tests in jest & enzyme.
 
 ## Features
 ✔️ React redux with React Hooks
+
 ✔️ State as a component
+
 ✔️ Flat component structure
+
 ✔️ Single responsability components
+
 ✔️ State management in O(1) runtime
+
 ✔️ Local styles
+
 ✔️ Local unit tests
 
 ## Local
