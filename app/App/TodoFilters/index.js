@@ -21,41 +21,24 @@ const TodoFilters = () => {
     });
   };
 
+  const renderFilterButton = (status, filter, text) => (
+    <button
+      className={classNames(
+        styles['filter-button'],
+        styles[`filter-button-${text.toLowerCase()}`],
+        selectedFilter === filter && styles['filter-button-selected']
+      )}
+      onClick={() => setStatusFilter(status, filter)}
+    >
+      {text}
+    </button>
+  );
+
   return (
     <div>
-      <button
-        className={classNames(
-          styles['filter-button'],
-          styles['filter-button-all'],
-          selectedFilter === TodoFiltersEnum.ALL
-            && styles['filter-button-selected']
-        )}
-        onClick={() => setStatusFilter([TODO, DONE], TodoFiltersEnum.ALL)}
-      >
-        All
-      </button>
-      <button
-        className={classNames(
-          styles['filter-button'],
-          styles['filter-button-todo'],
-          selectedFilter === TodoFiltersEnum.TODO
-            && styles['filter-button-selected']
-        )}
-        onClick={() => setStatusFilter([TODO], TodoFiltersEnum.TODO)}
-      >
-        Todo
-      </button>
-      <button
-        className={classNames(
-          styles['filter-button'],
-          styles['filter-button-done'],
-          selectedFilter === TodoFiltersEnum.DONE
-            && styles['filter-button-selected']
-        )}
-        onClick={() => setStatusFilter([DONE], TodoFiltersEnum.DONE)}
-      >
-        Done
-      </button>
+      {renderFilterButton([TODO, DONE], TodoFiltersEnum.ALL, 'All')}
+      {renderFilterButton([TODO], TodoFiltersEnum.TODO, 'ToDo')}
+      {renderFilterButton([DONE], TodoFiltersEnum.DONE, 'Done')}
     </div>
   );
 };
