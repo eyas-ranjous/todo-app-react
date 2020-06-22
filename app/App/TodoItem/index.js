@@ -24,13 +24,16 @@ const TodoItem = ({ todo }) => {
   };
 
   const updateTodo = () => {
-    dispatch({
-      type: 'UPDATE_TODO',
-      todo: {
-        id: todo.id,
-        text: todoInput.value
-      }
-    });
+    if (todoInput.value) {
+      todoInput.classList.remove(styles.required);
+      dispatch({
+        type: 'UPDATE_TODO',
+        todo: {
+          id: todo.id,
+          text: todoInput.value
+        }
+      });
+    }
   };
 
   const toggleTodoStatus = () => {
