@@ -1,18 +1,16 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import classNames from 'classnames';
-import styles from './styles.css';
+import { useDispatch } from 'react-redux';
+import AllFilterButton from './AllFilterButton';
+import TodoFilterButton from './TodoFilterButton';
+import DoneFilterButton from './DoneFilterButton';
 
 const TodoFilters = () => {
   const dispatch = useDispatch();
-  const { TODO, DONE } = useSelector((state) => state.TodoStatus);
-  const TodoFiltersEnum = useSelector((state) => state.TodoFilters);
-  const selectedFilter = useSelector((state) => state.selectedFilter);
 
-  const setStatusFilter = (status, filter) => {
+  const setFilter = (statusList, filter) => {
     dispatch({
       type: 'UPDATE_STATUS_FILTER_SET',
-      status
+      statusList
     });
 
     dispatch({
@@ -21,24 +19,11 @@ const TodoFilters = () => {
     });
   };
 
-  const renderFilterButton = (status, filter, text) => (
-    <button
-      className={classNames(
-        styles['filter-button'],
-        styles[`filter-button-${text.toLowerCase()}`],
-        selectedFilter === filter && styles['filter-button-selected']
-      )}
-      onClick={() => setStatusFilter(status, filter)}
-    >
-      {text}
-    </button>
-  );
-
   return (
     <div>
-      {renderFilterButton([TODO, DONE], TodoFiltersEnum.ALL, 'All')}
-      {renderFilterButton([TODO], TodoFiltersEnum.TODO, 'ToDo')}
-      {renderFilterButton([DONE], TodoFiltersEnum.DONE, 'Done')}
+      <AllFilterButton setFilter={setFilter} />
+      <TodoFilterButton setFilter={setFilter} />
+      <DoneFilterButton setFilter={setFilter} />
     </div>
   );
 };

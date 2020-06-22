@@ -34,7 +34,8 @@ const TodoText = ({ todo }) => {
       <span
         className={todo.status === TodoStatus.DONE
           ? styles['todo-item-striked']
-          : ''}
+          : ''
+        }
       >
         {todo.text}
       </span>
