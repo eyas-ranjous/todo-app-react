@@ -2,8 +2,7 @@
 A complete todo app in reactjs with tests in jest & enzyme.
 
 
-
-<img width="400" alt="app" src="https://user-images.githubusercontent.com/6517308/85344948-b1e76180-b4b6-11ea-86ef-f79599bac24f.png">
+<img width="405" alt="app" src="https://user-images.githubusercontent.com/6517308/85345154-536eb300-b4b7-11ea-851f-c69ae36b8181.png">
 
 ### Features
 ✔️ React redux with React Hooks
