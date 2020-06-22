@@ -1,0 +1,23 @@
+.todo-item-option {
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.todo-item-remove {
+  color: #f21010;
+  font-size: 1.2em;
+}
+
+.todo-item-edit {
+  color: #0057c9;
+  font-size: 1.2em;
+}
+
+.todo-item-edit-input {
+  font-size: 1em !important;
+}
+
+.todo-item-striked {
+  text-decoration: line-through;
+  color: #adadad;
+}
