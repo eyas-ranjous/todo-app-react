@@ -1,9 +1,8 @@
-# todo-app-redux-hooks
+## todo-app-redux-hooks
 A complete todo app in reactjs with tests in jest & enzyme.
 
-### Live Demo
 
-### Screenshot
+
 <img width="400" alt="app" src="https://user-images.githubusercontent.com/6517308/85344948-b1e76180-b4b6-11ea-86ef-f79599bac24f.png">
 
 ### Features
