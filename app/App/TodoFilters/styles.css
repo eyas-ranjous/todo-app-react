@@ -3,6 +3,10 @@
   margin-right: 8px;
 }
 
+.filter-button-selected {
+  border: 2px solid black !important;
+}
+
 .filter-button-all {
   background: #ffeba3;
 }
