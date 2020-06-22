@@ -1,0 +1,6 @@
+{
+  "testRegex": "/app/**/*.test.js",
+  "setupFilesAfterEnv": [
+    "<rootDir>/jest.setup.js"
+  ]
+}

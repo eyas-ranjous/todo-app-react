@@ -1,0 +1,28 @@
+.filter-button {
+  margin-bottom: 10px;
+  margin-right: 8px;
+}
+
+.filter-button-all {
+  background: #ffeba3;
+}
+
+.filter-button-all:hover {
+  background: #f2ce63;
+}
+
+.filter-button-todo {
+  background: #ffbfbf;
+}
+
+.filter-button-todo:hover {
+  background: #f28282;
+}
+
+.filter-button-done {
+  background: #a3ffbe;
+}
+
+.filter-button-done:hover {
+  background: #69db89;
+}

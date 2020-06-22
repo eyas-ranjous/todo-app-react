@@ -1,0 +1,36 @@
+.todo-app {
+  font-family: Arial;
+  width: 40%;
+  margin: 0 auto;
+}
+
+.todo-app h1 {
+  font-size: 1.7em;
+  margin-bottom: 50px;
+}
+
+.todo-app ul {
+  list-style-type: none;
+}
+
+.todo-app li {
+  font-size: 1.3em;
+  margin-bottom: 10px;
+}
+
+.todo-app input[type=text] {
+  padding: 5px;
+  font-size: 1.1em;
+  border-radius: 5px;
+  border: 1px solid #666;
+  min-width: 200px;
+}
+
+.todo-app button {
+  padding: 5px;
+  font-size: 1.1em;
+  border-radius: 5px;
+  border: 1px solid #666;
+  min-width: 100px;
+  cursor: pointer;
+}
