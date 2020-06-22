@@ -8,11 +8,16 @@ const TodoInput = () => {
   let todoInput;
 
   const addTodo = () => {
-    dispatch({
-      type: 'ADD_TODO',
-      todo: { text: todoInput.value }
-    });
-    todoInput.value = '';
+    if (!todoInput.value) {
+      todoInput.classList.add(styles.required);
+    } else {
+      todoInput.classList.remove(styles.required);
+      dispatch({
+        type: 'ADD_TODO',
+        todo: { text: todoInput.value }
+      });
+      todoInput.value = '';
+    }
   };
 
   const handleKeyDown = (e) => {
