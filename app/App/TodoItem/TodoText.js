@@ -10,23 +10,17 @@ const TodoText = ({ todo }) => {
   let todoInput;
 
   const removeEditedTodo = () => {
-    dispatch({
-      type: 'REMOVE_EDITED_TODO',
-      todoId: todo.id
-    });
+    dispatch({ type: 'REMOVE_EDITED_TODO', todoId: todo.id });
   };
 
   const updateTodo = () => {
-    if (todoInput.value) {
-      todoInput.classList.remove(styles.required);
-      dispatch({
-        type: 'UPDATE_TODO',
-        todo: {
-          id: todo.id,
-          text: todoInput.value
-        }
-      });
-    }
+    if (!todoInput.value) return;
+
+    todoInput.classList.remove(styles.required);
+    dispatch({
+      type: 'UPDATE_TODO',
+      todo: { id: todo.id, text: todoInput.value }
+    });
   };
 
   if (!editedTodos.has(todo.id)) {
@@ -35,9 +29,7 @@ const TodoText = ({ todo }) => {
       : '';
 
     return (
-      <span className={addedClass}>
-        {todo.text}
-      </span>
+      <span className={addedClass}>{todo.text}</span>
     );
   }
 

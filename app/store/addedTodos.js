@@ -4,16 +4,14 @@ let nextTodoId = 1;
 
 const addedTodos = (state = new Map(), action) => {
   if (action.type === 'ADD_TODO') {
-    const { todo } = action;
     const id = `todo-${nextTodoId}`;
     const status = TodoStatusEnum.TODO;
     nextTodoId += 1;
-    return new Map(state).set(id, { ...todo, ...{ id, status } });
+    return new Map(state).set(id, { ...action.todo, ...{ id, status } });
   }
 
   if (action.type === 'UPDATE_TODO') {
     const { todo } = action;
-
     if (!state.has(todo.id)) return state;
 
     const updatedTodo = { ...state.get(todo.id), ...todo };

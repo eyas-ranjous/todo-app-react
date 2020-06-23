@@ -4,20 +4,16 @@ import styles from './styles.css';
 
 const TodoInput = () => {
   const dispatch = useDispatch();
-  const TodoStatus = useSelector((state) => state.TodoStatus);
   let todoInput;
 
   const addTodo = () => {
     if (!todoInput.value) {
       todoInput.classList.add(styles.required);
-    } else {
-      todoInput.classList.remove(styles.required);
-      dispatch({
-        type: 'ADD_TODO',
-        todo: { text: todoInput.value }
-      });
-      todoInput.value = '';
+      return;
     }
+    todoInput.classList.remove(styles.required);
+    dispatch({ type: 'ADD_TODO', todo: { text: todoInput.value } });
+    todoInput.value = '';
   };
 
   const handleKeyDown = (e) => {
@@ -37,11 +33,7 @@ const TodoInput = () => {
   );
 
   const AddButton = () => (
-    <button
-      onClick={() => addTodo()}
-    >
-    Add
-    </button>
+    <button onClick={() => addTodo()}>Add</button>
   );
 
   return (

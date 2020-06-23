@@ -18,10 +18,7 @@ const AllFilterButton = ({ setFilter }) => {
   );
 
   return (
-    <button
-      className={classes}
-      onClick={() => setFilter(statusList, filter)}
-    >
+    <button className={classes} onClick={() => setFilter(statusList, filter)}>
       All
     </button>
   );

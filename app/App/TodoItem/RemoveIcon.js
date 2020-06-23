@@ -8,10 +8,7 @@ const RemoveIcon = ({ todo }) => {
   const icon = '✘';
 
   const removeTodo = () => {
-    dispatch({
-      type: 'REMOVE_TODO',
-      todoId: todo.id
-    });
+    dispatch({ type: 'REMOVE_TODO', todoId: todo.id });
   };
 
   const classes = classNames(
@@ -20,9 +17,7 @@ const RemoveIcon = ({ todo }) => {
   );
 
   return (
-    <span className={classes} onClick={removeTodo}>
-      {icon}
-    </span>
+    <span className={classes} onClick={removeTodo}>{icon}</span>
   );
 };
 

@@ -10,10 +10,7 @@ const TodoStatusIcon = ({ todo }) => {
   const doneIcon = '✅';
 
   const toggleTodoStatus = () => {
-    dispatch({
-      type: 'TOGGLE_TODO_STATUS',
-      todoId: todo.id
-    });
+    dispatch({ type: 'TOGGLE_TODO_STATUS', todoId: todo.id });
   };
 
   const statusIcon = todo.status === TodoStatus.DONE ? doneIcon : todoIcon;
