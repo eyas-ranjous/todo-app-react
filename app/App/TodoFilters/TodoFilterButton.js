@@ -22,7 +22,7 @@ const TodoFilterButton = ({ setFilter }) => {
       className={classes}
       onClick={() => setFilter(statusList, filter)}
     >
-      ToDO
+      To Do
     </button>
   );
 };
