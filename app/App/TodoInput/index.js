@@ -11,7 +11,6 @@ const TodoInput = () => {
       todoInput.classList.add(styles.required);
       return;
     }
-
     todoInput.classList.remove(styles.required);
     dispatch({
       type: 'ADD_TODO',
@@ -37,9 +36,7 @@ const TodoInput = () => {
   );
 
   const AddButton = () => (
-    <button onClick={() => addTodo()}>
-      Add
-    </button>
+    <button onClick={() => addTodo()}>Add</button>
   );
 
   return (
