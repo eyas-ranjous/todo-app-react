@@ -30,12 +30,12 @@ const TodoText = ({ todo }) => {
   };
 
   if (!editedTodos.has(todo.id)) {
+    const addedClass = todo.status === TodoStatus.DONE
+      ? styles['todo-item-striked']
+      : '';
+
     return (
-      <span
-        className={todo.status === TodoStatus.DONE
-          ? styles['todo-item-striked']
-          : ''}
-      >
+      <span className={addedClass}>
         {todo.text}
       </span>
     );

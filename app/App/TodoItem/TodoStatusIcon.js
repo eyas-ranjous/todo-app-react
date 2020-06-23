@@ -19,10 +19,7 @@ const TodoStatusIcon = ({ todo }) => {
   const statusIcon = todo.status === TodoStatus.DONE ? doneIcon : todoIcon;
 
   return (
-    <span
-      className={styles['todo-item-option']}
-      onClick={toggleTodoStatus}
-    >
+    <span className={styles['todo-item-option']} onClick={toggleTodoStatus}>
       {statusIcon}
     </span>
   );
