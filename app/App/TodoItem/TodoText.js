@@ -16,7 +16,6 @@ const TodoText = ({ todo }) => {
   const updateTodo = () => {
     if (!todoInput.value) return;
 
-    todoInput.classList.remove(styles.required);
     dispatch({
       type: 'UPDATE_TODO',
       todo: { id: todo.id, text: todoInput.value }
