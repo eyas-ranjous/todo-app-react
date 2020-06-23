@@ -12,10 +12,7 @@ const TodoInput = () => {
       return;
     }
     todoInput.classList.remove(styles.required);
-    dispatch({
-      type: 'ADD_TODO',
-      todo: { text: todoInput.value }
-    });
+    dispatch({ type: 'ADD_TODO', todo: { text: todoInput.value } });
     todoInput.value = '';
   };
 

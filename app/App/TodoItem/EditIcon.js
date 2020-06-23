@@ -8,10 +8,7 @@ const EditIcon = ({ todo }) => {
   const icon = '✎';
 
   const editTodo = () => {
-    dispatch({
-      type: 'EDIT_TODO',
-      todoId: todo.id
-    });
+    dispatch({ type: 'EDIT_TODO', todoId: todo.id });
   };
 
   const classes = classNames(
