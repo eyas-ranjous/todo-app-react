@@ -14,14 +14,13 @@ const EditIcon = ({ todo }) => {
     });
   };
 
+  const classes = classNames(
+    styles['todo-item-option'],
+    styles['todo-item-edit']
+  );
+
   return (
-    <span
-      className={classNames(
-        styles['todo-item-option'],
-        styles['todo-item-edit'],
-      )}
-      onClick={() => editTodo()}
-    >
+    <span className={classes} onClick={() => editTodo()}>
       {icon}
     </span>
   );

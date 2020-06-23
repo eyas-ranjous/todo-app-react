@@ -14,14 +14,13 @@ const RemoveIcon = ({ todo }) => {
     });
   };
 
+  const classes = classNames(
+    styles['todo-item-option'],
+    styles['todo-item-remove']
+  );
+
   return (
-    <span
-      className={classNames(
-        styles['todo-item-option'],
-        styles['todo-item-remove'],
-      )}
-      onClick={removeTodo}
-    >
+    <span className={classes} onClick={removeTodo}>
       {icon}
     </span>
   );

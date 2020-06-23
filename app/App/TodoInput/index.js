@@ -26,7 +26,7 @@ const TodoInput = () => {
     }
   };
 
-  const InputText = () => (
+  const TextInput = () => (
     <input
       type="text"
       className={styles['todo-text-input']}
@@ -46,7 +46,7 @@ const TodoInput = () => {
 
   return (
     <div className={styles['todo-input']}>
-      <InputText />
+      <TextInput />
       <AddButton />
     </div>
   );
