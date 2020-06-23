@@ -20,9 +20,7 @@ const RemoveIcon = ({ todo }) => {
   );
 
   return (
-    <span className={classes} onClick={removeTodo}>
-      {icon}
-    </span>
+    <span className={classes} onClick={removeTodo}>{icon}</span>
   );
 };
 

@@ -35,9 +35,7 @@ const TodoText = ({ todo }) => {
       : '';
 
     return (
-      <span className={addedClass}>
-        {todo.text}
-      </span>
+      <span className={addedClass}>{todo.text}</span>
     );
   }
 

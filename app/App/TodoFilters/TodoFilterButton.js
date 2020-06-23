@@ -18,10 +18,7 @@ const TodoFilterButton = ({ setFilter }) => {
   );
 
   return (
-    <button
-      className={classes}
-      onClick={() => setFilter(statusList, filter)}
-    >
+    <button className={classes} onClick={() => setFilter(statusList, filter)}>
       To Do
     </button>
   );

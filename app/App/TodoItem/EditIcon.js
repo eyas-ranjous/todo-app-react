@@ -20,9 +20,7 @@ const EditIcon = ({ todo }) => {
   );
 
   return (
-    <span className={classes} onClick={() => editTodo()}>
-      {icon}
-    </span>
+    <span className={classes} onClick={() => editTodo()}>{icon}</span>
   );
 };
 

@@ -20,9 +20,7 @@ const TodoListWith = (TodoItem) => () => {
   }
 
   return (
-    <ul className={styles['todo-list']}>
-      {TodoItems}
-    </ul>
+    <ul className={styles['todo-list']}>{TodoItems}</ul>
   );
 };
 
