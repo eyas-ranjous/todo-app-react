@@ -1,5 +1,5 @@
-import todoFilterSet from '../todoFilterSet';
-import { TodoStatusEnum } from '../TodoStatusEnum';
+import todoFilterSet from '../../app/store/todoFilterSet';
+import { TodoStatusEnum } from '../../app/store/TodoStatusEnum';
 
 describe('todoFilterSet', () => {
   it('add a status list', () => {

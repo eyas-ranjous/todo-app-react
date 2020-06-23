@@ -1,5 +1,5 @@
-import selectedFilter from '../selectedFilter';
-import { TodoFiltersEnum } from '../TodoFiltersEnum';
+import selectedFilter from '../../app/store/selectedFilter';
+import { TodoFiltersEnum } from '../../app/store/TodoFiltersEnum';
 
 describe('selectedFilter', () => {
   let state;

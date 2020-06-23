@@ -1,4 +1,4 @@
-import editedTodos from '../editedTodos';
+import editedTodos from '../../app/store/editedTodos';
 
 describe('editedTodos', () => {
   let state;

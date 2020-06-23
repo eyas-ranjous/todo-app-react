@@ -1,5 +1,5 @@
-import addedTodos from '../addedTodos';
-import { TodoStatusEnum } from '../todoStatusEnum';
+import addedTodos from '../../app/store/addedTodos';
+import { TodoStatusEnum } from '../../app/store/todoStatusEnum';
 
 describe('addedTodos', () => {
   let state;
