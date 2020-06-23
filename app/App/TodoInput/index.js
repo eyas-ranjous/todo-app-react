@@ -4,7 +4,6 @@ import styles from './styles.css';
 
 const TodoInput = () => {
   const dispatch = useDispatch();
-  const TodoStatus = useSelector((state) => state.TodoStatus);
   let todoInput;
 
   const addTodo = () => {
