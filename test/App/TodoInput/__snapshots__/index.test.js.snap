@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TodoInput renders successfully 1`] = `
+<Provider
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
+  <TodoInput>
+    <div
+      className="todo-input"
+    >
+      <TextInput>
+        <input
+          className="todo-text-input"
+          onKeyDown={[Function]}
+          placeholder="Write Todo Text..."
+          type="text"
+        />
+      </TextInput>
+      <AddButton>
+        <button
+          onClick={[Function]}
+        >
+          Add
+        </button>
+      </AddButton>
+    </div>
+  </TodoInput>
+</Provider>
+`;
