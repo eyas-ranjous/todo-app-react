@@ -21,16 +21,4 @@ describe('TodoItem', () => {
     );
     expect(wrapper).toMatchSnapshot();
   });
-
-  it('edit todo text when edit icon clicked', () => {
-
-  });
-
-  it('toggle todo status when status icon clicked', () => {
-
-  });
-
-  it('removes todo item when remove icon clicked', () => {
-
-  });
 });
