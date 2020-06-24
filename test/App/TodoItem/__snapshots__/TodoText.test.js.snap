@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TodoText enable editing todo text when edit clicked 1`] = `
+<Provider
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
+  <TodoText
+    todo={
+      Object {
+        "id": "todo-1",
+        "status": 1,
+        "text": "test task",
+      }
+    }
+  >
+    <input
+      className="todo-item-edit-input"
+      defaultValue="test task"
+      onKeyDown={[Function]}
+      type="text"
+    />
+  </TodoText>
+</Provider>
+`;
+
+exports[`TodoText renders successfully 1`] = `
+<Provider
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
+  <TodoText
+    todo={
+      Object {
+        "id": "todo-1",
+        "status": 1,
+        "text": "test task",
+      }
+    }
+  >
+    <span
+      className=""
+    >
+      test task
+    </span>
+  </TodoText>
+</Provider>
+`;

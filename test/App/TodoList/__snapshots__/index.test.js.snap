@@ -1,0 +1,250 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TodoList renders successfully 1`] = `
+<Provider
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
+  <Component>
+    <ul
+      className="todo-list"
+    >
+      <TodoItem
+        key="todo-1"
+        todo={
+          Object {
+            "id": "todo-1",
+            "status": 1,
+            "text": "test task 1",
+          }
+        }
+      >
+        <li>
+          <TodoStatusIcon
+            todo={
+              Object {
+                "id": "todo-1",
+                "status": 1,
+                "text": "test task 1",
+              }
+            }
+          >
+            <span
+              className="todo-item-option"
+              onClick={[Function]}
+            >
+              ⬜
+            </span>
+          </TodoStatusIcon>
+          <RemoveIcon
+            todo={
+              Object {
+                "id": "todo-1",
+                "status": 1,
+                "text": "test task 1",
+              }
+            }
+          >
+            <span
+              className="todo-item-option todo-item-remove"
+              onClick={[Function]}
+            >
+              ✘
+            </span>
+          </RemoveIcon>
+          <EditIcon
+            todo={
+              Object {
+                "id": "todo-1",
+                "status": 1,
+                "text": "test task 1",
+              }
+            }
+          >
+            <span
+              className="todo-item-option todo-item-edit"
+              onClick={[Function]}
+            >
+              ✎
+            </span>
+          </EditIcon>
+          <TodoText
+            todo={
+              Object {
+                "id": "todo-1",
+                "status": 1,
+                "text": "test task 1",
+              }
+            }
+          >
+            <span
+              className=""
+            >
+              test task 1
+            </span>
+          </TodoText>
+        </li>
+      </TodoItem>
+      <TodoItem
+        key="todo-2"
+        todo={
+          Object {
+            "id": "todo-2",
+            "status": 1,
+            "text": "test task 2",
+          }
+        }
+      >
+        <li>
+          <TodoStatusIcon
+            todo={
+              Object {
+                "id": "todo-2",
+                "status": 1,
+                "text": "test task 2",
+              }
+            }
+          >
+            <span
+              className="todo-item-option"
+              onClick={[Function]}
+            >
+              ⬜
+            </span>
+          </TodoStatusIcon>
+          <RemoveIcon
+            todo={
+              Object {
+                "id": "todo-2",
+                "status": 1,
+                "text": "test task 2",
+              }
+            }
+          >
+            <span
+              className="todo-item-option todo-item-remove"
+              onClick={[Function]}
+            >
+              ✘
+            </span>
+          </RemoveIcon>
+          <EditIcon
+            todo={
+              Object {
+                "id": "todo-2",
+                "status": 1,
+                "text": "test task 2",
+              }
+            }
+          >
+            <span
+              className="todo-item-option todo-item-edit"
+              onClick={[Function]}
+            >
+              ✎
+            </span>
+          </EditIcon>
+          <TodoText
+            todo={
+              Object {
+                "id": "todo-2",
+                "status": 1,
+                "text": "test task 2",
+              }
+            }
+          >
+            <span
+              className=""
+            >
+              test task 2
+            </span>
+          </TodoText>
+        </li>
+      </TodoItem>
+      <TodoItem
+        key="todo-3"
+        todo={
+          Object {
+            "id": "todo-3",
+            "status": 1,
+            "text": "test task 3",
+          }
+        }
+      >
+        <li>
+          <TodoStatusIcon
+            todo={
+              Object {
+                "id": "todo-3",
+                "status": 1,
+                "text": "test task 3",
+              }
+            }
+          >
+            <span
+              className="todo-item-option"
+              onClick={[Function]}
+            >
+              ⬜
+            </span>
+          </TodoStatusIcon>
+          <RemoveIcon
+            todo={
+              Object {
+                "id": "todo-3",
+                "status": 1,
+                "text": "test task 3",
+              }
+            }
+          >
+            <span
+              className="todo-item-option todo-item-remove"
+              onClick={[Function]}
+            >
+              ✘
+            </span>
+          </RemoveIcon>
+          <EditIcon
+            todo={
+              Object {
+                "id": "todo-3",
+                "status": 1,
+                "text": "test task 3",
+              }
+            }
+          >
+            <span
+              className="todo-item-option todo-item-edit"
+              onClick={[Function]}
+            >
+              ✎
+            </span>
+          </EditIcon>
+          <TodoText
+            todo={
+              Object {
+                "id": "todo-3",
+                "status": 1,
+                "text": "test task 3",
+              }
+            }
+          >
+            <span
+              className=""
+            >
+              test task 3
+            </span>
+          </TodoText>
+        </li>
+      </TodoItem>
+    </ul>
+  </Component>
+</Provider>
+`;

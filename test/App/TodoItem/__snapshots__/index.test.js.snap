@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TodoItem renders successfully 1`] = `
+<Provider
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
+  <TodoItem
+    todo={
+      Object {
+        "id": "todo-1",
+        "status": 1,
+        "text": "test task",
+      }
+    }
+  >
+    <li>
+      <TodoStatusIcon
+        todo={
+          Object {
+            "id": "todo-1",
+            "status": 1,
+            "text": "test task",
+          }
+        }
+      >
+        <span
+          className="todo-item-option"
+          onClick={[Function]}
+        >
+          ⬜
+        </span>
+      </TodoStatusIcon>
+      <RemoveIcon
+        todo={
+          Object {
+            "id": "todo-1",
+            "status": 1,
+            "text": "test task",
+          }
+        }
+      >
+        <span
+          className="todo-item-option todo-item-remove"
+          onClick={[Function]}
+        >
+          ✘
+        </span>
+      </RemoveIcon>
+      <EditIcon
+        todo={
+          Object {
+            "id": "todo-1",
+            "status": 1,
+            "text": "test task",
+          }
+        }
+      >
+        <span
+          className="todo-item-option todo-item-edit"
+          onClick={[Function]}
+        >
+          ✎
+        </span>
+      </EditIcon>
+      <TodoText
+        todo={
+          Object {
+            "id": "todo-1",
+            "status": 1,
+            "text": "test task",
+          }
+        }
+      >
+        <span
+          className=""
+        >
+          test task
+        </span>
+      </TodoText>
+    </li>
+  </TodoItem>
+</Provider>
+`;

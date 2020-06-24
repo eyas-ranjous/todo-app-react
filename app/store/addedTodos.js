@@ -1,4 +1,4 @@
-import { TodoStatusEnum } from './todoStatusEnum';
+import { TodoStatusEnum } from './TodoStatusEnum';
 
 let nextTodoId = 1;
 

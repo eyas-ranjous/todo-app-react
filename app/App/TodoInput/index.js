@@ -22,24 +22,16 @@ const TodoInput = () => {
     }
   };
 
-  const TextInput = () => (
-    <input
-      type="text"
-      className={styles['todo-text-input']}
-      onKeyDown={handleKeyDown}
-      placeholder="Write Todo Text..."
-      ref={(el) => { todoInput = el; }}
-    />
-  );
-
-  const AddButton = () => (
-    <button onClick={() => addTodo()}>Add</button>
-  );
-
   return (
     <div className={styles['todo-input']}>
-      <TextInput />
-      <AddButton />
+      <input
+        type="text"
+        className={styles['todo-text-input']}
+        onKeyDown={handleKeyDown}
+        placeholder="Write Todo Text..."
+        ref={(el) => { todoInput = el; }}
+      />
+      <button onClick={addTodo}>Add</button>
     </div>
   );
 };
