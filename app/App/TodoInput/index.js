@@ -33,7 +33,7 @@ const TodoInput = () => {
   );
 
   const AddButton = () => (
-    <button onClick={() => addTodo()}>Add</button>
+    <button onClick={addTodo}>Add</button>
   );
 
   return (
