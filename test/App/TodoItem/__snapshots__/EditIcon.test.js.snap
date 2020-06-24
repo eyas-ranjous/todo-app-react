@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EditIcon renders successfully 1`] = `
+<Provider
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
+  <EditIcon
+    todo={
+      Object {
+        "id": "todo-1",
+        "status": 1,
+        "text": "test task",
+      }
+    }
+  >
+    <span
+      className="todo-item-option todo-item-edit"
+      onClick={[Function]}
+    >
+      ✎
+    </span>
+  </EditIcon>
+</Provider>
+`;
