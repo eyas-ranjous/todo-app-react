@@ -23,21 +23,17 @@ exports[`TodoApp renders successfully 1`] = `
         <div
           className="todo-input"
         >
-          <TextInput>
-            <input
-              className="todo-text-input"
-              onKeyDown={[Function]}
-              placeholder="Write Todo Text..."
-              type="text"
-            />
-          </TextInput>
-          <AddButton>
-            <button
-              onClick={[Function]}
-            >
-              Add
-            </button>
-          </AddButton>
+          <input
+            className="todo-text-input"
+            onKeyDown={[Function]}
+            placeholder="Write Todo Text..."
+            type="text"
+          />
+          <button
+            onClick={[Function]}
+          >
+            Add
+          </button>
         </div>
       </TodoInput>
       <Component>
