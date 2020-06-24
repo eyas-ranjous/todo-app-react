@@ -1,4 +1,4 @@
-import { TodoFiltersEnum } from './todoFiltersEnum';
+import { TodoFiltersEnum } from './TodoFiltersEnum';
 
 const selectedFilter = (state = TodoFiltersEnum.ALL, action) => {
   if (action.type === 'SET_SELECTED_STATUS_FILTER') {
