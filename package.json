@@ -1,7 +1,7 @@
 {
   "name": "todo-app-redux",
-  "version": "0.0.0",
-  "description": "t",
+  "version": "1.0.0",
+  "description": "A complete todo app in Reactjs with Redux & React Hooks.",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --config ./webpack.config.js --mode development --open",
@@ -9,22 +9,15 @@
     "test": "jest"
   },
   "repository": {
-    "type": "",
-    "url": ""
+    "type": "git",
+    "url": "git+https://github.com/react-work/todo-app-redux-hooks.git"
   },
-  "author": "",
-  "license": "UNLICENSED",
+  "author": "Eyas Ranjous <https://github.com/eyas-ranjous>",
+  "license": "ISC",
   "bugs": {
-    "url": ""
+    "url": "https://github.com/react-work/todo-app-redux-hooks/issues"
   },
-  "homepage": "",
-  "dependencies": {
-    "classnames": "^2.2.6",
-    "react": "^16.11.0",
-    "react-dom": "^16.11.0",
-    "react-redux": "^7.2.0",
-    "redux": "^4.0.5"
-  },
+  "homepage": "https://github.com/react-work/todo-app-redux-hooks#readme",
   "jest": {
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
@@ -36,6 +29,13 @@
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
       "\\.(css|less)$": "identity-obj-proxy"
     }
+  },
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "react-redux": "^7.2.0",
+    "redux": "^4.0.5"
   },
   "devDependencies": {
     "@babel/core": "^7.10.3",
