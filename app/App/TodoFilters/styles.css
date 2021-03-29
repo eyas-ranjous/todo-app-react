@@ -1,32 +1,54 @@
-.filter-button {
+.todo-filters {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.todo-filters button {
+  padding: 5px;
+  border: none;
+  min-width: 50px;
+  cursor: pointer;
+  outline: none;
+  background: #dddbdb;
   margin-bottom: 10px;
-  margin-right: 8px;
+  font-size: 0.9em;
 }
 
-.filter-button-selected {
-  border: 2px solid black !important;
+.todo-filters .all {
+  margin-right: 10px;
 }
 
-.filter-button-all {
-  background: #ffeba3;
-}
-
-.filter-button-all:hover {
+.todo-filters .all-selected {
+  margin-right: 10px;
   background: #f2ce63;
 }
 
-.filter-button-todo {
-  background: #ffbfbf;
+.todo-filters .all:hover {
+  background: #f2ce63;
 }
 
-.filter-button-todo:hover {
+.todo-filters .todo {
+  margin-right: 10px;
+}
+
+.todo-filters .todo:hover {
   background: #f28282;
 }
 
-.filter-button-done {
-  background: #a3ffbe;
+.todo-filters .todo-selected {
+  margin-right: 10px;
+  background: #f28282;
 }
 
-.filter-button-done:hover {
+.todo-filters .done {
+  margin-right: 10px;
+}
+
+.todo-filters .done:hover {
+  background: #69db89;
+}
+
+.todo-filters .done-selected {
+  margin-right: 10px;
   background: #69db89;
 }

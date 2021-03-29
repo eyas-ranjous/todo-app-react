@@ -1,31 +1,34 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
-import AllFilterButton from './AllFilterButton';
-import TodoFilterButton from './TodoFilterButton';
-import DoneFilterButton from './DoneFilterButton';
 
-const TodoFilters = () => {
-  const dispatch = useDispatch();
+import styles from './styles.css';
 
-  const setFilter = (statusList, filter) => {
-    dispatch({
-      type: 'UPDATE_STATUS_FILTER_SET',
-      statusList
-    });
-
-    dispatch({
-      type: 'SET_SELECTED_STATUS_FILTER',
-      filter
-    });
-  };
-
-  return (
-    <div>
-      <AllFilterButton setFilter={setFilter} />
-      <TodoFilterButton setFilter={setFilter} />
-      <DoneFilterButton setFilter={setFilter} />
-    </div>
-  );
+export const Filters = {
+  All: 0,
+  Todo: 1,
+  Done: 2
 };
 
-export default TodoFilters;
+export const TodoFilters = ({ todoFilter, setTodoFilter }) => (
+  <div className={styles['todo-filters']}>
+    <button
+      className={todoFilter === Filters.All ? styles['all-selected'] : styles.all}
+      onClick={() => setTodoFilter(Filters.All)}
+    >
+      All
+    </button>
+
+    <button
+      className={todoFilter === Filters.Todo ? styles['todo-selected'] : styles.todo}
+      onClick={() => setTodoFilter(Filters.Todo)}
+    >
+      To Do
+    </button>
+
+    <button
+      className={todoFilter === Filters.Done ? styles['done-selected'] : styles.done}
+      onClick={() => setTodoFilter(Filters.Done)}
+    >
+      Done
+    </button>
+  </div>
+);

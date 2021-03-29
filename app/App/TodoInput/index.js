@@ -1,19 +1,18 @@
-import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import React, { useRef } from 'react';
+
+import TodoStatus from '../TodoList/TodoStatus';
 import styles from './styles.css';
 
-const TodoInput = () => {
-  const dispatch = useDispatch();
-  let todoInput;
+export default ({ saveTodo }) => {
+  const todoInput = useRef();
 
   const addTodo = () => {
-    if (!todoInput.value) {
-      todoInput.classList.add(styles.required);
+    const { value: text } = todoInput.current;
+    if (!text) {
       return;
     }
-    todoInput.classList.remove(styles.required);
-    dispatch({ type: 'ADD_TODO', todo: { text: todoInput.value } });
-    todoInput.value = '';
+    saveTodo({ text, status: TodoStatus.Todo });
+    todoInput.current.value = '';
   };
 
   const handleKeyDown = (e) => {
@@ -26,14 +25,11 @@ const TodoInput = () => {
     <div className={styles['todo-input']}>
       <input
         type="text"
-        className={styles['todo-text-input']}
+        className={styles['todo-input']}
         onKeyDown={handleKeyDown}
-        placeholder="Write Todo Text..."
-        ref={(el) => { todoInput = el; }}
+        placeholder="New Todo..."
+        ref={todoInput}
       />
-      <button onClick={addTodo}>Add</button>
     </div>
   );
 };
-
-export default TodoInput;
