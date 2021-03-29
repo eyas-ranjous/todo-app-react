@@ -24,7 +24,7 @@ export default () => {
 
   return (
     <div className={styles['todo-app']}>
-      <h1>A Todo App in React w/ Hooks</h1>
+      <h1>A Todo App in React & Hooks</h1>
       <div className={styles.todos}>
         <TodoInput saveTodo={saveTodo} />
         <TodoFilters
