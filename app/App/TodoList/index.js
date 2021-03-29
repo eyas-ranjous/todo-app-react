@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
 
-import styles from './styles.css';
+import Filters from '../TodoFilters/Filters';
 import TodoStatus from './TodoStatus';
 import TodoItem from './TodoItem';
+import styles from './styles.css';
 
-export default ({
-  todos, todoFilter, saveTodo, removeTodo, Filters
-}) => {
+export default ({ todos, todoFilter, saveTodo, removeTodo }) => {
   const [editedTodos, setEditedTodos] = useState(new Set());
   const [filteredTodos, setFilteredTodos] = useState([]);
 
