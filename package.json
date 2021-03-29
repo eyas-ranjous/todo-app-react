@@ -1,6 +1,6 @@
 {
   "name": "todo-app-redux",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A complete todo app in Reactjs with Redux & React Hooks.",
   "main": "index.js",
   "scripts": {
@@ -33,9 +33,7 @@
   "dependencies": {
     "classnames": "^2.2.6",
     "react": "^16.11.0",
-    "react-dom": "^16.11.0",
-    "react-redux": "^7.2.0",
-    "redux": "^4.0.5"
+    "react-dom": "^16.11.0"
   },
   "devDependencies": {
     "@babel/core": "^7.10.3",

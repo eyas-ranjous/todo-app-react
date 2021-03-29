@@ -1,11 +1,53 @@
 .todo-list {
-  margin-top: 0;
-  margin-bottom: 40px;
-  padding-left: 5px;
+  width: 100%;
+  font-size: 1.05em;
 }
 
-.no-todos-msg {
-  font-size: 1.1em;
-  margin-bottom: 40px;
-  padding-left: 10px;
+.todo-list ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.todo-list ul li {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  direction: row;
+  align-items: center;
+}
+
+.todo-list ul li .status-icon {
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.todo-list ul li .remove-icon {
+  color: #f21010;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.todo-list ul li .edit-icon {
+  color: #0057c9;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.todo-list ul li .todo {
+  margin-left: 20px;
+}
+
+.todo-list ul li .done {
+  color: #adadad;
+  text-decoration: line-through;
+  margin-left: 20px;
+}
+
+.todo-list ul li input {
+  padding: 7px;
+  border: 1px solid #e5e3e3;
+  font-size: 0.9em;
+  margin-left: 20px;
+  outline: none;
 }

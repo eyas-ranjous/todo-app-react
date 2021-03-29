@@ -1,27 +1,64 @@
-import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import React, { useState, useEffect } from 'react';
+
 import styles from './styles.css';
+import TodoStatus from './TodoStatus';
+import TodoItem from './TodoItem';
 
-const TodoListWith = (TodoItem) => () => {
-  const addedTodos = useSelector((state) => state.addedTodos);
-  const todoFilterSet = useSelector((state) => state.todoFilterSet);
+export default ({
+  todos, todoFilter, saveTodo, removeTodo, Filters
+}) => {
+  const [editedTodos, setEditedTodos] = useState(new Set());
+  const [filteredTodos, setFilteredTodos] = useState([]);
 
-  const TodoItems = [];
-  addedTodos.forEach((todo) => {
-    if (todoFilterSet.size === 0 || todoFilterSet.has(todo.status)) {
-      TodoItems.push(<TodoItem key={todo.id} todo={todo} />);
-    }
-  });
+  useEffect(() => {
+    const newFilteredTodos = [];
+    todos.forEach((todo) => {
+      if (todoFilter === Filters.All || todo.status === todoFilter) {
+        newFilteredTodos.push(todo);
+      }
+    });
+    setFilteredTodos(newFilteredTodos);
+  }, [todoFilter, todos]);
 
-  if (TodoItems.length === 0) {
-    return (
-      <p className={styles['no-todos-msg']}>No Todos Found</p>
-    );
-  }
+  const editTodo = (id) => {
+    setEditedTodos(new Set(editedTodos).add(id));
+  };
+
+  const saveEditedTodo = (todo) => {
+    const newEditedTodos = new Set(editedTodos);
+    newEditedTodos.delete(todo.id);
+    setEditedTodos(newEditedTodos);
+    saveTodo(todo);
+  };
+
+  const toggleTodoStatus = (todo) => {
+    const newStatus = todo.status === TodoStatus.Todo
+      ? TodoStatus.Done
+      : TodoStatus.Todo;
+    saveTodo({ ...todo, ...{ status: newStatus } });
+  };
 
   return (
-    <ul className={styles['todo-list']}>{TodoItems}</ul>
+    <div className={styles['todo-list']}>
+      {filteredTodos.length === 0 && (
+        <div className={styles['no-todos-msg']}>No Todos Found</div>
+      )}
+
+      {filteredTodos.length > 0 && (
+        <ul className={styles['todo-list']}>
+          {filteredTodos.map((todo) => (
+            <TodoItem
+              key={todo.id}
+              todo={todo}
+              isEditing={editedTodos.has(todo.id)}
+              editTodo={editTodo}
+              saveEditedTodo={saveEditedTodo}
+              toggleTodoStatus={toggleTodoStatus}
+              removeTodo={removeTodo}
+            />
+          ))}
+        </ul>
+      )}
+    </div>
   );
 };
-
-export default TodoListWith;
