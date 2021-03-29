@@ -3,7 +3,7 @@ import React, { useRef } from 'react';
 import TodoStatus from '../TodoList/TodoStatus';
 import styles from './styles.css';
 
-export default ({ saveTodo }) => {
+export default React.memo(({ saveTodo }) => {
   const todoInput = useRef();
 
   const addTodo = () => {
@@ -16,7 +16,7 @@ export default ({ saveTodo }) => {
   };
 
   const handleKeyDown = (e) => {
-    if (e.keyCode === 13) {
+    if (e.key === 'Enter') {
       addTodo();
     }
   };
@@ -32,4 +32,4 @@ export default ({ saveTodo }) => {
       />
     </div>
   );
-};
+});
