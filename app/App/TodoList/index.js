@@ -1,41 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
-import Filters from '../TodoFilters/Filters';
-import TodoStatus from './TodoStatus';
+import useFilteredTodos from './useFilteredTodos';
+import useEditedTodos from './useEditedTodos';
+import useToggleTodoStatus from './useToggleTodoStatus';
+
 import TodoItem from './TodoItem';
+
 import styles from './styles.css';
 
-export default ({ todos, todoFilter, saveTodo, removeTodo }) => {
-  const [editedTodos, setEditedTodos] = useState(new Set());
-  const [filteredTodos, setFilteredTodos] = useState([]);
-
-  useEffect(() => {
-    const newFilteredTodos = [];
-    todos.forEach((todo) => {
-      if (todoFilter === Filters.All || todo.status === todoFilter) {
-        newFilteredTodos.push(todo);
-      }
-    });
-    setFilteredTodos(newFilteredTodos);
-  }, [todoFilter, todos]);
-
-  const editTodo = (id) => {
-    setEditedTodos(new Set(editedTodos).add(id));
-  };
-
-  const saveEditedTodo = (todo) => {
-    const newEditedTodos = new Set(editedTodos);
-    newEditedTodos.delete(todo.id);
-    setEditedTodos(newEditedTodos);
-    saveTodo(todo);
-  };
-
-  const toggleTodoStatus = (todo) => {
-    const newStatus = todo.status === TodoStatus.Todo
-      ? TodoStatus.Done
-      : TodoStatus.Todo;
-    saveTodo({ ...todo, ...{ status: newStatus } });
-  };
+export default ({ todos, todoFilter, updateTodo, removeTodo }) => {
+  const { filteredTodos } = useFilteredTodos({ todos, todoFilter });
+  const { editedTodos, editTodo, saveEditedTodo } = useEditedTodos(updateTodo);
+  const { toggleTodoStatus } = useToggleTodoStatus(updateTodo);
 
   return (
     <div className={styles['todo-list']}>

@@ -1,29 +1,29 @@
 import React from 'react';
 
-import Filters from './Filters';
+import TodoStatus from '../TodoStatus';
+
 import styles from './styles.css';
 
-export default React.memo(({ todoFilter, updateFilter }) => (
+export default ({ todoFilter, setTodoFilter }) => (
   <div className={styles['todo-filters']}>
     <button
-      className={todoFilter === Filters.All ? styles['all-selected'] : styles.all}
-      onClick={() => updateFilter(Filters.All)}
+      className={styles[`all${!todoFilter ? '-selected' : ''}`]}
+      onClick={setTodoFilter.bind(null, null)}
     >
       All
     </button>
-
     <button
-      className={todoFilter === Filters.Todo ? styles['todo-selected'] : styles.todo}
-      onClick={() => updateFilter(Filters.Todo)}
+      className={styles[`todo${todoFilter === TodoStatus.todo ? '-selected' : ''}`]}
+      onClick={setTodoFilter.bind(null, TodoStatus.todo)}
     >
       To Do
     </button>
 
     <button
-      className={todoFilter === Filters.Done ? styles['done-selected'] : styles.done}
-      onClick={() => updateFilter(Filters.Done)}
+      className={styles[`done${todoFilter === TodoStatus.done ? '-selected' : ''}`]}
+      onClick={setTodoFilter.bind(null, TodoStatus.done)}
     >
       Done
     </button>
   </div>
-));
+);

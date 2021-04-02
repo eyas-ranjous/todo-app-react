@@ -1,12 +1,14 @@
 import React, { useRef } from 'react';
+import classnames from 'classnames';
 
-import TodoStatus from './TodoStatus';
+import TodoStatus from '../TodoStatus';
+
 import styles from './styles.css';
 
 export default ({
   todo,
-  editTodo,
   toggleTodoStatus,
+  editTodo,
   saveEditedTodo,
   removeTodo,
   isEditing
@@ -23,14 +25,14 @@ export default ({
     <li>
       <span
         title="change"
-        className={styles['status-icon']}
+        className={styles.icon}
         onClick={() => toggleTodoStatus(todo)}
       >
-        {todo.status === TodoStatus.Done ? '✅' : '⬜'}
+        {todo.status === TodoStatus.done ? '✅' : '⬜'}
       </span>
 
       <span title="remove"
-        className={styles['remove-icon']}
+        className={classnames(styles.icon, styles['remove-icon'])}
         onClick={() => removeTodo(todo)}
       >
         ✘
@@ -38,14 +40,14 @@ export default ({
 
       <span
         title="edit"
-        className={styles['edit-icon']}
+        className={classnames(styles.icon, styles['edit-icon'])}
         onClick={() => editTodo(todo.id)}
       >
         ✎
       </span>
 
       {!isEditing && (
-        <span className={todo.status === TodoStatus.Done
+        <span className={todo.status === TodoStatus.done
           ? styles.done
           : styles.todo
         }>

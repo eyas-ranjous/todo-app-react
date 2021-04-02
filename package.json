@@ -1,7 +1,7 @@
 {
-  "name": "todo-app-redux",
-  "version": "1.0.3",
-  "description": "A complete todo app in Reactjs with Redux & React Hooks.",
+  "name": "todo-app-react-hooks",
+  "version": "1.0.4",
+  "description": "A todo app in Reactjs with React Hooks.",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --config ./webpack.config.js --mode development --open",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/react-work/todo-app-redux-hooks.git"
+    "url": "git+https://github.com/eyas-ranjous/todo-app-react-hooks.git"
   },
   "author": "Eyas Ranjous <https://github.com/eyas-ranjous>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/react-work/todo-app-redux-hooks/issues"
+    "url": "https://github.com/eyas-ranjous/todo-app-react-hooks/issues"
   },
-  "homepage": "https://github.com/react-work/todo-app-redux-hooks#readme",
+  "homepage": "https://github.com/eyas-ranjous/todo-app-react-hooks#readme",
   "jest": {
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
