@@ -8,9 +8,10 @@ export default ({ addTodo }) => {
 
   const handleKeyDown = (e) => {
     if (e.key === 'Enter') {
-      const { value: text } = todoInput.current;
-      if (!text) return;
-      addTodo({ text, status: TodoStatus.todo });
+      const { value } = todoInput.current;
+      if (!value) return;
+
+      addTodo({ text: value, status: TodoStatus.todo });
       todoInput.current.value = '';
     }
   };
