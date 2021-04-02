@@ -6,7 +6,7 @@ export default ({ todos, todoFilter }) => {
   useEffect(() => {
     const newFilteredTodos = [];
     todos.forEach((todo) => {
-      if (todoFilter.size === 0 || todoFilter.has(todo.status)) {
+      if (!todoFilter || todoFilter === todo.status) {
         newFilteredTodos.push(todo);
       }
     });

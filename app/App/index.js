@@ -11,7 +11,7 @@ import TodoList from './TodoList';
 
 export default () => {
   const { todos, addTodo, updateTodo, removeTodo } = useTodos();
-  const { todoFilter, toggleTodoFilter } = useTodoFilter();
+  const { todoFilter, setTodoFilter } = useTodoFilter();
 
   return (
     <div className={styles['todo-app']}>
@@ -20,13 +20,13 @@ export default () => {
         <TodoInput addTodo={addTodo} />
         <TodoFilters
           todoFilter={todoFilter}
-          toggleTodoFilter={toggleTodoFilter}
+          setTodoFilter={setTodoFilter}
         />
         <TodoList
           todos={todos}
+          todoFilter={todoFilter}
           updateTodo={updateTodo}
           removeTodo={removeTodo}
-          todoFilter={todoFilter}
         />
       </div>
     </div>

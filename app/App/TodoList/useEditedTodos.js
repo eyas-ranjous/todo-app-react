@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 export default (updateTodo) => {
   const [editedTodos, setEditedTodos] = useState(new Set());

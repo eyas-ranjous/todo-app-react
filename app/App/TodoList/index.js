@@ -4,20 +4,14 @@ import styles from './styles.css';
 
 import useFilteredTodos from './useFilteredTodos';
 import useEditedTodos from './useEditedTodos';
+import useToggleTodoStatus from './useToggleTodoStatus';
 
-import TodoStatus from '../TodoStatus';
 import TodoItem from './TodoItem';
 
 export default ({ todos, todoFilter, updateTodo, removeTodo }) => {
   const { filteredTodos } = useFilteredTodos({ todos, todoFilter });
   const { editedTodos, editTodo, saveEditedTodo } = useEditedTodos(updateTodo);
-
-  const toggleTodoStatus = (todo) => {
-    const newStatus = todo.status === TodoStatus.todo
-      ? TodoStatus.done
-      : TodoStatus.todo;
-    updateTodo({ ...todo, ...{ status: newStatus } });
-  };
+  const { toggleTodoStatus } = useToggleTodoStatus(updateTodo);
 
   return (
     <div className={styles['todo-list']}>

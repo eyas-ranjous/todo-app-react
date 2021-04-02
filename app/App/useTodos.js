@@ -4,12 +4,14 @@ export default () => {
   const [todos, setTodos] = useState(new Map());
 
   const addTodo = (todo) => {
-    const id = todos.size + 1;
-    setTodos(new Map(todos).set(id, { ...todo, id }));
+    const newTodos = new Map(todos);
+    const id = newTodos.size + 1;
+    setTodos(newTodos.set(id, { ...todo, id }));
   };
 
   const updateTodo = (todo) => {
-    setTodos(new Map(todos).set(todo.id, { ...todo }));
+    const newTodos = new Map(todos);
+    setTodos(newTodos.set(todo.id, { ...todo }));
   };
 
   const removeTodo = (todo) => {

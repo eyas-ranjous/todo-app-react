@@ -17,21 +17,18 @@
   align-items: center;
 }
 
-.todo-list ul li .status-icon {
+.todo-list ul li .icon {
   margin-right: 5px;
   cursor: pointer;
+  user-select: none;
 }
 
 .todo-list ul li .remove-icon {
   color: #f21010;
-  margin-right: 5px;
-  cursor: pointer;
 }
 
 .todo-list ul li .edit-icon {
   color: #0057c9;
-  margin-right: 5px;
-  cursor: pointer;
 }
 
 .todo-list ul li .todo {
