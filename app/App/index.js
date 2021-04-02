@@ -1,16 +1,14 @@
 import React, { useState, useCallback } from 'react';
 import styles from './styles.css';
 import useTodos from './useTodos';
+import useTodoFilter from './useTodoFilter';
 import TodoFilters from './TodoFilters';
-import Filters from './TodoFilters/Filters';
 import TodoInput from './TodoInput';
 import TodoList from './TodoList';
 
 export default () => {
   const { todos, addTodo, updateTodo, removeTodo } = useTodos();
-  const [todoFilter, setTodoFilter] = useState(Filters.All);
-
-  const updateFilter = useCallback(setTodoFilter, [todoFilter]);
+  const { todoFilter, updateTodoFilter } = useTodoFilter();
 
   return (
     <div className={styles['todo-app']}>
@@ -19,7 +17,7 @@ export default () => {
         <TodoInput addTodo={addTodo} />
         <TodoFilters
           todoFilter={todoFilter}
-          updateFilter={updateFilter}
+          updateTodoFilter={updateTodoFilter}
         />
         <TodoList
           todos={todos}
