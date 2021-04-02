@@ -1,9 +1,17 @@
 import { useState } from 'react';
 
-import Filters from './TodoFilters/Filters';
-
 export default () => {
-  const [todoFilter, updateTodoFilter] = useState(Filters.All);
+  const [todoFilter, setTodoFilter] = useState(new Set());
 
-  return { todoFilter, updateTodoFilter };
+  const toggleTodoFilter = (todoStatus) => {
+    const newTodoFilter = new Set(todoFilter);
+    if (newTodoFilter.has(todoStatus)) {
+      newTodoFilter.delete(todoStatus);
+    } else {
+      newTodoFilter.add(todoStatus);
+    }
+    setTodoFilter(newTodoFilter);
+  };
+
+  return { todoFilter, toggleTodoFilter };
 };

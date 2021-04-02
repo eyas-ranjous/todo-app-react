@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 
-import TodoStatus from '../TodoList/TodoStatus';
+import TodoStatus from '../TodoStatus';
 import styles from './styles.css';
 
 export default ({ addTodo }) => {
@@ -10,7 +10,7 @@ export default ({ addTodo }) => {
     if (e.key === 'Enter') {
       const { value: text } = todoInput.current;
       if (!text) return;
-      addTodo({ text, status: TodoStatus.Todo });
+      addTodo({ text, status: TodoStatus.todo });
       todoInput.current.value = '';
     }
   };

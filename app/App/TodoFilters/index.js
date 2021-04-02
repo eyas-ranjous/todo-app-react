@@ -1,32 +1,22 @@
 import React from 'react';
 
-import Filters from './Filters';
+import TodoStatus from '../TodoStatus';
 import styles from './styles.css';
 
-export default ({ todoFilter, updateTodoFilter }) => {
-  console.log('rendered TodoFilters');
-  return (
-    <div className={styles['todo-filters']}>
-      <button
-        className={todoFilter === Filters.All ? styles['all-selected'] : styles.all}
-        onClick={() => updateTodoFilter(Filters.All)}
-      >
-        All
-      </button>
+export default ({ todoFilter, toggleTodoFilter }) => (
+  <div className={styles['todo-filters']}>
+    <button
+      className={styles[`todo${todoFilter.has(TodoStatus.todo) ? '-selected' : ''}`]}
+      onClick={() => toggleTodoFilter(TodoStatus.todo)}
+    >
+      To Do
+    </button>
 
-      <button
-        className={todoFilter === Filters.Todo ? styles['todo-selected'] : styles.todo}
-        onClick={() => updateTodoFilter(Filters.Todo)}
-      >
-        To Do
-      </button>
-
-      <button
-        className={todoFilter === Filters.Done ? styles['done-selected'] : styles.done}
-        onClick={() => updateTodoFilter(Filters.Done)}
-      >
-        Done
-      </button>
-    </div>
-  );
-};
+    <button
+      className={styles[`done${todoFilter.has(TodoStatus.done) ? '-selected' : ''}`]}
+      onClick={() => toggleTodoFilter(TodoStatus.done)}
+    >
+      Done
+    </button>
+  </div>
+);
