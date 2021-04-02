@@ -5,10 +5,10 @@ import TodoStatus from './TodoStatus';
 import TodoItem from './TodoItem';
 import styles from './styles.css';
 
-export default ({ todos, todoFilter, saveTodo, removeTodo }) => {
+export default ({ todos, todoFilter, updateTodo, removeTodo }) => {
   const [editedTodos, setEditedTodos] = useState(new Set());
   const [filteredTodos, setFilteredTodos] = useState([]);
-
+  console.log('rendered TodoList');
   useEffect(() => {
     const newFilteredTodos = [];
     todos.forEach((todo) => {
@@ -27,14 +27,14 @@ export default ({ todos, todoFilter, saveTodo, removeTodo }) => {
     const newEditedTodos = new Set(editedTodos);
     newEditedTodos.delete(todo.id);
     setEditedTodos(newEditedTodos);
-    saveTodo(todo);
+    updateTodo(todo);
   };
 
   const toggleTodoStatus = (todo) => {
     const newStatus = todo.status === TodoStatus.Todo
       ? TodoStatus.Done
       : TodoStatus.Todo;
-    saveTodo({ ...todo, ...{ status: newStatus } });
+    updateTodo({ ...todo, ...{ status: newStatus } });
   };
 
   return (

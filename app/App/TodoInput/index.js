@@ -3,21 +3,15 @@ import React, { useRef } from 'react';
 import TodoStatus from '../TodoList/TodoStatus';
 import styles from './styles.css';
 
-export default React.memo(({ saveTodo }) => {
+export default ({ addTodo }) => {
   const todoInput = useRef();
-
-  const addTodo = () => {
-    const { value: text } = todoInput.current;
-    if (!text) {
-      return;
-    }
-    saveTodo({ text, status: TodoStatus.Todo });
-    todoInput.current.value = '';
-  };
 
   const handleKeyDown = (e) => {
     if (e.key === 'Enter') {
-      addTodo();
+      const { value: text } = todoInput.current;
+      if (!text) return;
+      addTodo({ text, status: TodoStatus.Todo });
+      todoInput.current.value = '';
     }
   };
 
@@ -32,4 +26,4 @@ export default React.memo(({ saveTodo }) => {
       />
     </div>
   );
-});
+};
