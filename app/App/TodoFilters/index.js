@@ -1,6 +1,7 @@
 import React from 'react';
 
 import TodoStatus from '../TodoStatus';
+
 import styles from './styles.css';
 
 export default ({ todoFilter, setTodoFilter }) => (

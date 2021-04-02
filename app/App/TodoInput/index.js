@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 
 import TodoStatus from '../TodoStatus';
+
 import styles from './styles.css';
 
 export default ({ addTodo }) => {

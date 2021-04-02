@@ -1,12 +1,12 @@
 import React from 'react';
 
-import styles from './styles.css';
-
 import useFilteredTodos from './useFilteredTodos';
 import useEditedTodos from './useEditedTodos';
 import useToggleTodoStatus from './useToggleTodoStatus';
 
 import TodoItem from './TodoItem';
+
+import styles from './styles.css';
 
 export default ({ todos, todoFilter, updateTodo, removeTodo }) => {
   const { filteredTodos } = useFilteredTodos({ todos, todoFilter });

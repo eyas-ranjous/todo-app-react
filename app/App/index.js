@@ -1,13 +1,13 @@
 import React from 'react';
 
-import styles from './styles.css';
-
 import useTodos from './useTodos';
 import useTodoFilter from './useTodoFilter';
 
-import TodoFilters from './TodoFilters';
 import TodoInput from './TodoInput';
+import TodoFilters from './TodoFilters';
 import TodoList from './TodoList';
+
+import styles from './styles.css';
 
 export default () => {
   const { todos, addTodo, updateTodo, removeTodo } = useTodos();
