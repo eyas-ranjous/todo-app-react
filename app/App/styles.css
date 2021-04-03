@@ -1,12 +1,13 @@
 .todo-app {
   font-family: arial;
   margin: 0 auto;
-  width: 30%;
+  width: 35%;
 }
 
 .todo-app h1 {
   font-size: 1.4em;
   margin-bottom: 50px;
+  text-align: center;
 }
 
 .todo-app .todos {

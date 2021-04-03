@@ -1,6 +1,7 @@
 .todo-list {
   width: 100%;
   font-size: 1.05em;
+  margin-left: 5px;
 }
 
 .todo-list ul {
