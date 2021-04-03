@@ -4,7 +4,7 @@
 }
 
 .todo-filters button {
-  padding: 5px;
+  padding: 10px;
   border: none;
   min-width: 50px;
   cursor: pointer;
@@ -12,6 +12,7 @@
   background: #dddbdb;
   margin-bottom: 10px;
   font-size: 0.9em;
+  border-radius: 20px;
 }
 
 .todo-filters .all {
