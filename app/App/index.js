@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import useTodos from './useTodos';
-import useTodoFilter from './useTodoFilter';
 
 import TodoInput from './TodoInput';
 import TodoFilters from './TodoFilters';
@@ -11,7 +10,7 @@ import styles from './styles.css';
 
 export default () => {
   const { todos, addTodo, updateTodo, removeTodo } = useTodos();
-  const { todoFilter, setTodoFilter } = useTodoFilter();
+  const [todoFilter, setTodoFilter] = useState();
 
   return (
     <div className={styles['todo-app']}>
@@ -19,6 +18,7 @@ export default () => {
       <div className={styles.todos}>
         <TodoInput addTodo={addTodo} />
         <TodoFilters
+          todos={todos}
           todoFilter={todoFilter}
           setTodoFilter={setTodoFilter}
         />

@@ -17,7 +17,7 @@ export default ({
 
   const handleEditKeyDown = (e) => {
     if (e.key === 'Enter') {
-      saveEditedTodo({ ...todo, ...{ text: todoInput.current.value } });
+      saveEditedTodo({ ...todo, ...{ text: todoInput.current.value.trim() } });
     }
   };
 
@@ -48,8 +48,8 @@ export default ({
 
       {!isEditing && (
         <span className={todo.status === TodoStatus.done
-          ? styles.done
-          : styles.todo
+          ? classnames(styles.text, styles.done)
+          : styles.text
         }>
           {todo.text}
         </span>

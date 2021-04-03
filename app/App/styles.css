@@ -1,8 +1,5 @@
 .todo-app {
-  font-family: sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  font-family: arial;
   margin: 0 auto;
   width: 30%;
 }
@@ -14,6 +11,4 @@
 
 .todo-app .todos {
   width: 100%;
-  display: flex;
-  flex-direction: column;
 }
