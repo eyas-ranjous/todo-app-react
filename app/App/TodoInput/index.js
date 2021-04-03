@@ -4,15 +4,18 @@ import TodoStatus from '../TodoStatus';
 
 import styles from './styles.css';
 
-export default ({ addTodo }) => {
+export default React.memo(({ addTodo }) => {
   const todoInput = useRef();
 
   const handleKeyDown = (e) => {
     if (e.key === 'Enter') {
-      const { value } = todoInput.current;
-      if (!value) return;
+      if (!todoInput.current.value) return;
 
-      addTodo({ text: value, status: TodoStatus.todo });
+      addTodo({
+        text: todoInput.current.value.trim(),
+        status: TodoStatus.todo
+      });
+
       todoInput.current.value = '';
     }
   };
@@ -28,4 +31,4 @@ export default ({ addTodo }) => {
       />
     </div>
   );
-};
+});

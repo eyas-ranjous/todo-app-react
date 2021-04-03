@@ -48,8 +48,8 @@ export default ({
 
       {!isEditing && (
         <span className={todo.status === TodoStatus.done
-          ? styles.done
-          : styles.todo
+          ? classnames(styles.text, styles.done)
+          : styles.text
         }>
           {todo.text}
         </span>

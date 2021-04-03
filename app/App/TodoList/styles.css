@@ -12,9 +12,6 @@
 .todo-list ul li {
   margin-right: 10px;
   margin-bottom: 10px;
-  display: flex;
-  direction: row;
-  align-items: center;
 }
 
 .todo-list ul li .icon {
@@ -31,14 +28,13 @@
   color: #0057c9;
 }
 
-.todo-list ul li .todo {
+.todo-list ul li .text {
   margin-left: 20px;
 }
 
 .todo-list ul li .done {
   color: #adadad;
   text-decoration: line-through;
-  margin-left: 20px;
 }
 
 .todo-list ul li input {

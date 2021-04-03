@@ -1,7 +1,7 @@
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 
 export default () => {
   const [todoFilter, setTodoFilter] = useState();
 
-  return { todoFilter, setTodoFilter };
+  return [todoFilter, setTodoFilter];
 };

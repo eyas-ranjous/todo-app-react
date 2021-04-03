@@ -4,26 +4,27 @@ import TodoStatus from '../TodoStatus';
 
 import styles from './styles.css';
 
-export default ({ todoFilter, setTodoFilter }) => (
+export default React.memo(({ todoFilter, updateTodoFilter }) => (
   <div className={styles['todo-filters']}>
     <button
       className={styles[`all${!todoFilter ? '-selected' : ''}`]}
-      onClick={setTodoFilter.bind(null, null)}
+      onClick={updateTodoFilter.bind(null, null)}
     >
       All
     </button>
+
     <button
       className={styles[`todo${todoFilter === TodoStatus.todo ? '-selected' : ''}`]}
-      onClick={setTodoFilter.bind(null, TodoStatus.todo)}
+      onClick={updateTodoFilter.bind(null, TodoStatus.todo)}
     >
       To Do
     </button>
 
     <button
       className={styles[`done${todoFilter === TodoStatus.done ? '-selected' : ''}`]}
-      onClick={setTodoFilter.bind(null, TodoStatus.done)}
+      onClick={updateTodoFilter.bind(null, TodoStatus.done)}
     >
       Done
     </button>
   </div>
-);
+));
