@@ -17,7 +17,7 @@ export default ({
 
   const handleEditKeyDown = (e) => {
     if (e.key === 'Enter') {
-      saveEditedTodo({ ...todo, ...{ text: todoInput.current.value } });
+      saveEditedTodo({ ...todo, ...{ text: todoInput.current.value.trim() } });
     }
   };
 
