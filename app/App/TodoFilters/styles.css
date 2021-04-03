@@ -8,11 +8,16 @@
   border: none;
   min-width: 50px;
   cursor: pointer;
-  outline: none;
   background: #dddbdb;
   margin-bottom: 10px;
   font-size: 0.9em;
   border-radius: 20px;
+  border: none;
+  outline: none;
+}
+
+.todo-filters button:focus {
+  outline: none;
 }
 
 .todo-filters .all {
