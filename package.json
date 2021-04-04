@@ -1,6 +1,6 @@
 {
   "name": "todo-app-react-hooks",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "A todo app in Reactjs with React Hooks.",
   "main": "index.js",
   "scripts": {
