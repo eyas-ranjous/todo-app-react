@@ -9,6 +9,7 @@ export default ({
   todo,
   toggleTodoStatus,
   editTodo,
+  unEditTodo,
   saveEditedTodo,
   removeTodo,
   isEditing
@@ -17,7 +18,12 @@ export default ({
 
   const handleEditKeyDown = (e) => {
     if (e.key === 'Enter') {
-      saveEditedTodo({ ...todo, ...{ text: todoInput.current.value.trim() } });
+      const text = todoInput.current.value.trim();
+      if (!text) {
+        unEditTodo(todo.id);
+        return;
+      }
+      saveEditedTodo({ ...todo, ...{ text } });
     }
   };
 

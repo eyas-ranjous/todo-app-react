@@ -10,8 +10,13 @@ import styles from './styles.css';
 
 export default ({ todos, todoFilter, updateTodo, removeTodo }) => {
   const { filteredTodos } = useFilteredTodos({ todos, todoFilter });
-  const { editedTodos, editTodo, saveEditedTodo } = useEditedTodos(updateTodo);
   const { toggleTodoStatus } = useToggleTodoStatus(updateTodo);
+  const {
+    editedTodos,
+    editTodo,
+    unEditTodo,
+    saveEditedTodo
+  } = useEditedTodos(updateTodo);
 
   return (
     <div className={styles['todo-list']}>
@@ -27,6 +32,7 @@ export default ({ todos, todoFilter, updateTodo, removeTodo }) => {
               todo={todo}
               isEditing={editedTodos.has(todo.id)}
               editTodo={editTodo}
+              unEditTodo={unEditTodo}
               saveEditedTodo={saveEditedTodo}
               toggleTodoStatus={toggleTodoStatus}
               removeTodo={removeTodo}

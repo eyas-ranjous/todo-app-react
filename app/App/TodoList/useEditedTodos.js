@@ -7,12 +7,16 @@ export default (updateTodo) => {
     setEditedTodos(new Set(editedTodos).add(id));
   };
 
-  const saveEditedTodo = (todo) => {
+  const unEditTodo = (id) => {
     const newEditedTodos = new Set(editedTodos);
-    newEditedTodos.delete(todo.id);
+    newEditedTodos.delete(id);
     setEditedTodos(newEditedTodos);
+  };
+
+  const saveEditedTodo = (todo) => {
+    unEditTodo(todo.id);
     updateTodo(todo);
   };
 
-  return { editedTodos, editTodo, saveEditedTodo };
+  return { editedTodos, editTodo, unEditTodo, saveEditedTodo };
 };
