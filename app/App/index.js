@@ -9,7 +9,15 @@ import TodoList from './TodoList';
 import styles from './styles.css';
 
 export default () => {
-  const { todos, addTodo, updateTodo, removeTodo } = useTodos();
+  const {
+    todos,
+    todoCount,
+    doneCount,
+    addTodo,
+    updateTodo,
+    removeTodo
+  } = useTodos();
+
   const [todoFilter, setTodoFilter] = useState();
 
   return (
@@ -18,7 +26,8 @@ export default () => {
       <div className={styles.todos}>
         <TodoInput addTodo={addTodo} />
         <TodoFilters
-          todos={todos}
+          todoCount={todoCount}
+          doneCount={doneCount}
           todoFilter={todoFilter}
           setTodoFilter={setTodoFilter}
         />
