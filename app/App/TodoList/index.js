@@ -16,7 +16,7 @@ export default ({ todos, todoFilter, updateTodo, removeTodo }) => {
   return (
     <div className={styles['todo-list']}>
       {filteredTodos.length === 0 && (
-        <div className={styles['no-todos-msg']}>No Todos Found</div>
+        <div>No Items Found</div>
       )}
 
       {filteredTodos.length > 0 && (

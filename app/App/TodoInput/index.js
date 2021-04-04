@@ -9,13 +9,10 @@ export default React.memo(({ addTodo }) => {
 
   const handleKeyDown = (e) => {
     if (e.key === 'Enter') {
-      if (!todoInput.current.value) return;
+      const text = todoInput.current.value.trim();
+      if (!text) return;
 
-      addTodo({
-        text: todoInput.current.value.trim(),
-        status: TodoStatus.todo
-      });
-
+      addTodo({ text, status: TodoStatus.todo });
       todoInput.current.value = '';
     }
   };
