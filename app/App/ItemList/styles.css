@@ -1,10 +1,11 @@
 .item-list {
-  font-size: 1.1em;
+  font-size: 1.05em;
   margin-left: 5px;
 }
 
 .item-list ul {
   list-style-type: none;
+  font-size: 1.05em;
   margin: 0;
   padding: 0;
 }
