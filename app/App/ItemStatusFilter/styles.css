@@ -1,9 +1,9 @@
-.todo-filters {
+.item-status-filter {
   margin-bottom: 15px;
   width: 100%;
 }
 
-.todo-filters button {
+.item-status-filter button {
   padding: 10px;
   border: none;
   min-width: 50px;
@@ -16,45 +16,41 @@
   outline: none;
 }
 
-.todo-filters button:focus {
-  outline: none;
-}
-
-.todo-filters .all {
+.item-status-filter button.all {
   margin-right: 10px;
 }
 
-.todo-filters .all-selected {
+.item-status-filter button.all-selected {
   margin-right: 10px;
   background: #f2ce63;
 }
 
-.todo-filters .all:hover {
+.item-status-filter button.all:hover {
   background: #f2ce63;
 }
 
-.todo-filters .todo {
+.item-status-filter button.todo {
   margin-right: 10px;
 }
 
-.todo-filters .todo:hover {
+.item-status-filter button.todo:hover {
   background: #f28282;
 }
 
-.todo-filters .todo-selected {
+.item-status-filter button.todo-selected {
   margin-right: 10px;
   background: #f28282;
 }
 
-.todo-filters .done {
+.item-status-filter button.done {
   margin-right: 10px;
 }
 
-.todo-filters .done:hover {
+.item-status-filter button.done:hover {
   background: #69db89;
 }
 
-.todo-filters .done-selected {
+.item-status-filter button.done-selected {
   margin-right: 10px;
   background: #69db89;
 }

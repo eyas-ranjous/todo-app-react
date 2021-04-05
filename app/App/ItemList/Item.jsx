@@ -1,29 +1,29 @@
 import React, { useRef } from 'react';
 import classnames from 'classnames';
 
-import TodoStatus from '../TodoStatus';
+import ItemStatus from '../ItemStatus';
 
 import styles from './styles.css';
 
 export default ({
-  todo,
-  toggleTodoStatus,
-  editTodo,
-  unEditTodo,
-  saveEditedTodo,
-  removeTodo,
+  item,
+  toggleItemStatus,
+  editItem,
+  unEditItem,
+  saveEditedItem,
+  removeItem,
   isEditing
 }) => {
-  const todoInput = useRef();
+  const itemInput = useRef();
 
   const handleEditKeyDown = (e) => {
     if (e.key === 'Enter') {
-      const text = todoInput.current.value.trim();
+      const text = itemInput.current.value.trim();
       if (!text) {
-        unEditTodo(todo.id);
+        unEditItem(item.id);
         return;
       }
-      saveEditedTodo({ ...todo, ...{ text } });
+      saveEditedItem({ ...item, ...{ text } });
     }
   };
 
@@ -32,14 +32,14 @@ export default ({
       <span
         title="change"
         className={styles.icon}
-        onClick={() => toggleTodoStatus(todo)}
+        onClick={() => toggleItemStatus(item)}
       >
-        {todo.status === TodoStatus.done ? '✅' : '⬜'}
+        {item.status === ItemStatus.done ? '✅' : '⬜'}
       </span>
 
       <span title="remove"
         className={classnames(styles.icon, styles['remove-icon'])}
-        onClick={() => removeTodo(todo)}
+        onClick={() => removeItem(item)}
       >
         ✘
       </span>
@@ -47,17 +47,17 @@ export default ({
       <span
         title="edit"
         className={classnames(styles.icon, styles['edit-icon'])}
-        onClick={() => editTodo(todo.id)}
+        onClick={() => editItem(item.id)}
       >
         ✎
       </span>
 
       {!isEditing && (
-        <span className={todo.status === TodoStatus.done
+        <span className={item.status === ItemStatus.done
           ? classnames(styles.text, styles.done)
           : styles.text
         }>
-          {todo.text}
+          {item.text}
         </span>
       )}
 
@@ -65,8 +65,8 @@ export default ({
         <input
           type="text"
           onKeyDown={handleEditKeyDown}
-          defaultValue={todo.text}
-          ref={todoInput}
+          defaultValue={item.text}
+          ref={itemInput}
         />
       )}
     </li>

@@ -1,43 +1,43 @@
-.todo-list {
-  font-size: 1.05em;
+.item-list {
+  font-size: 1.1em;
   margin-left: 5px;
 }
 
-.todo-list ul {
+.item-list ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.todo-list ul li {
+.item-list ul li {
   margin-right: 10px;
   margin-bottom: 10px;
 }
 
-.todo-list ul li .icon {
+.item-list ul li .icon {
   margin-right: 5px;
   cursor: pointer;
   user-select: none;
 }
 
-.todo-list ul li .remove-icon {
+.item-list ul li .remove-icon {
   color: #f21010;
 }
 
-.todo-list ul li .edit-icon {
+.item-list ul li .edit-icon {
   color: #0057c9;
 }
 
-.todo-list ul li .text {
+.item-list ul li .text {
   margin-left: 20px;
 }
 
-.todo-list ul li .done {
+.item-list ul li .done {
   color: #adadad;
   text-decoration: line-through;
 }
 
-.todo-list ul li input {
+.item-list ul li input {
   padding: 7px;
   border: 1px solid #e5e3e3;
   font-size: 0.9em;
