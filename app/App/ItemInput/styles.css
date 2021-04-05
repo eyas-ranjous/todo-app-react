@@ -1,12 +1,12 @@
-.todo-input {
-  margin-bottom: 10px;
-  font-size: 1em;
-  width: 100%;
+.item-input {
+  margin-bottom: 20px;
 }
 
-.todo-input input {
+.item-input input {
   padding: 10px 15px;
   border: 1px solid #e5e3e3;
   outline: none;
+  font-size: 1em;
   border-radius: 20px;
+  width: 100%;
 }

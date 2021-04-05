@@ -27,5 +27,15 @@
   "env": {
     "browser": true
   },
-  "extends": ["airbnb-base"]
+  "extends": [
+    "airbnb-base",
+    "plugin:import/react"
+  ],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js",".jsx"]
+      }
+    }
+  }
 }
