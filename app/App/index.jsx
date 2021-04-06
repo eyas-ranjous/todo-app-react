@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import useTodos from './useItems';
+import useItems from './useItems';
 
 import ItemInput from './ItemInput';
 import ItemFilters from './ItemStatusFilter';
@@ -16,7 +16,7 @@ export default () => {
     addItem,
     updateItem,
     removeItem
-  } = useTodos();
+  } = useItems();
 
   const [itemStatusFilter, setItemStatusFilter] = useState(null);
 
