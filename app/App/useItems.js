@@ -10,7 +10,8 @@ export default () => {
   const addItem = (item) => {
     const newItemId = items.size + 1;
     const nextItems = new Map(items);
-    setItems(nextItems.set(newItemId, { ...item, id: newItemId }));
+    nextItems.set(newItemId, { ...item, id: newItemId });
+    setItems(nextItems);
     setTodoCount(todoCount + 1);
   };
 
@@ -30,14 +31,15 @@ export default () => {
   };
 
   const removeItem = (item) => {
-    const nextItems = new Map(items);
-    nextItems.delete(item.id);
-    setItems(nextItems);
     if (item.status === ItemStatus.todo) {
       setTodoCount(todoCount - 1);
     } else if (item.status === ItemStatus.done) {
       setDoneCount(doneCount - 1);
     }
+
+    const nextItems = new Map(items);
+    nextItems.delete(item.id);
+    setItems(nextItems);
   };
 
   return {
