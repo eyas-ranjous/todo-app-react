@@ -2,10 +2,5 @@
   font-family: arial;
   margin: 0 auto;
   width: 35%;
-}
-
-.todo-app h1 {
-  font-size: 1.4em;
-  margin-bottom: 30px;
-  text-align: center;
+  margin-top: 20px;
 }

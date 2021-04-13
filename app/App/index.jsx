@@ -22,7 +22,6 @@ export default () => {
 
   return (
     <div className={styles['todo-app']}>
-      <h1>A Todo App in React & Hooks</h1>
       <ItemInput addItem={addItem} />
       <ItemFilters
         todoCount={todoCount}
