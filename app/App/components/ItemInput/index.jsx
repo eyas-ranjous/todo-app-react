@@ -1,21 +1,27 @@
-import React, { useRef } from 'react';
+import React, { useCallback, useRef } from 'react';
 
-import ItemStatus from '../ItemStatus';
+import { ItemStatus, ItemAction } from '../../types';
 
 import styles from './styles.css';
 
-export default React.memo(({ addItem }) => {
+const ItemInput = React.memo(({ dispatch }) => {
   const itemInput = useRef();
 
-  const handleKeyDown = (e) => {
+  const handleKeyDown = useCallback((e) => {
     if (e.key === 'Enter') {
       const text = itemInput.current.value.trim();
       if (!text) return;
 
-      addItem({ text, status: ItemStatus.todo });
+      dispatch({
+        type: ItemAction.ADD,
+        payload: {
+          text,
+          status: ItemStatus.TODO
+        }
+      });
       itemInput.current.value = '';
     }
-  };
+  }, [itemInput.current]);
 
   return (
     <div className={styles['item-input']}>
@@ -28,3 +34,5 @@ export default React.memo(({ addItem }) => {
     </div>
   );
 });
+
+export { ItemInput }
