@@ -1,6 +1,6 @@
 <a href="https://admiring-bardeen-9dd0d8.netlify.app" target="_blank">Demo</a>
 
-<img width="556" alt="todo_app" src="https://user-images.githubusercontent.com/6517308/114547579-e4896300-9c5e-11eb-93c8-8e42304ba888.png">
+<img width="518" alt="demo" src="https://user-images.githubusercontent.com/6517308/218296456-10afc8d8-e16d-4d9e-92a5-e5c748bfa05a.png">
 
 ### Install
 `npm install`

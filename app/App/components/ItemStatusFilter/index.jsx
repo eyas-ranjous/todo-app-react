@@ -9,8 +9,8 @@ const ItemStatusFilter = React.memo(({
   itemStatusCount,
   itemStatusFilter,
 }) => {
-  const todoCount = itemStatusCount?.get(ItemStatus.TODO) || 0;
-  const doneCount = itemStatusCount?.get(ItemStatus.DONE) || 0;
+  const todoCount = itemStatusCount.get(ItemStatus.TODO) || 0;
+  const doneCount = itemStatusCount.get(ItemStatus.DONE) || 0;
 
   const updateStatusFilter = useCallback((itemStatus) => {
     dispatch({
