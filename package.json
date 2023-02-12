@@ -1,6 +1,6 @@
 {
   "name": "todo-app-react",
-  "version": "1.0.16",
+  "version": "1.0.15",
   "description": "Todo App in React w/ useReduce to manage state",
   "main": "index.js",
   "scripts": {
